@@ -7,12 +7,17 @@
   <% newListItems.forEach((item)=>{ %>
   <form action="/delete" method="post">
     <div class="item">
-      <input
-        type="checkbox"
-        name="checkbox"
-        value="<%= item._id %>"
-        onchange="this.form.submit()"
-      />
+      <div class="checkbox-wrapper-40">
+        <label>
+          <input
+            type="checkbox"
+            name="checkbox"
+            value="<%= item._id %>"
+            onchange="this.form.submit()"
+          />
+          <span class="checkbox"></span>
+        </label>
+      </div>
       <p><%= item.name %></p>
       <input type="hidden" name="listName" value="<%= listTitle %>" />
     </div>
